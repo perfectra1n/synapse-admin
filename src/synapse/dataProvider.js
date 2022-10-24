@@ -11,7 +11,7 @@ const jsonClient = (url, options = {}) => {
       token: `Bearer ${token}`,
     };
   }
-  return fetchUtils.fetchJson(url, options);
+  return fetchUtils.fetchJson(encodeURIComponent(url), options);
 };
 
 const mxcUrlToHttp = mxcUrl => {
